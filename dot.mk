@@ -12,12 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Release name
+PRODUCT_RELEASE_NAME := taido
+
 $(call inherit-product, device/motorola/taido/full_taido.mk)
 
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/dot/config/common_full_phone.mk)
+
+# Bootanimation
+TARGET_BOOTANIMATION_PRELOAD := true
+TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 
 
-PRODUCT_NAME := lineage_taido
+PRODUCT_NAME := dot_taido
 BOARD_VENDOR := motorola
 PRODUCT_DEVICE := taido
 
@@ -30,3 +37,6 @@ PRODUCT_BRAND := motorola
 TARGET_VENDOR := motorola
 TARGET_VENDOR_PRODUCT_NAME := taido_row
 TARGET_VENDOR_DEVICE_NAME := taido_row
+
+# Available languages
+PRODUCT_LOCALES := en_US en_GB ru_RU uk_UA tr_TR sk_SK vi_VN fr_FR ar_EG pt_BR
